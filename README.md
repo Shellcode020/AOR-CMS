@@ -6,31 +6,36 @@ Important Note: For the server status to work, the webfiles must run from same m
 
 Features:
 - Homepage
-  > Server Status,  Players Online, Latency, Registered Accounts, Characters, Discord Integrated-News
+  > - Server Status
+  > - Players Online
+  > - Latency
+  > - Registered Accounts
+  > - Characters
+  > - Integrated Discord-News
   
 - Nano Programs (Database)
-  >  Shows all nanos for each profession.
-  Hovering over said nano will display more details.
+  > - Shows all nanos for each profession with skill requirements.
+  > - Hover over the nano to see effects.
   
 - Items (Database)
-  > Item Lookup. Database used is stored in \assets\database\items.sqlite.
-  Taken from latest Live client.
+  > - Item Lookup, find your items in the search bar.
+  > - Click on the item to see detailed description.
   
 - Guides
-  > All (community) guides in one database, from your local website.
+  > - All (community) guides directly from your CMS.
   
 - Download
-  > Shows the downloadable client. Modify the download.html to unblock the download button and add your link there.
+  > - Shows the downloadable client.
   
 - Support
-  > Support / FAQ page. Modify support.html to your liking.
+  > - Shows the Support / FAQ page.
   
 - Account Panel
-  > Allows users to login or register for an new account.
-  > Logging in will display a menu with your Account name, your account type (GM/Player) and your account status. Right now, Account Status will always show Active. Banned is currently not implemented.
-  > You will see your characters on this page, allowing you to use the Unstuck Feature, teleporting your stuck character back to ICC. (Character must be offline for this).
-  > You are able to change your account name, last name and email on this page.
-  > You are able to change your password on this page.
+  > - Login and Register
+  > - Menu: Account Name, Account Type (Player / GM), Account Status (Active/Banned)
+  > - Character List: Shows Character Name, Location, Unstuck.
+  > - Account Information: Shows Username, First Name, Last Name, Email with options to edit them except for username.
+  > - Change Password: Allows you to change your password.
   
 
 ## Preview Homepage
