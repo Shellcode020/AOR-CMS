@@ -5,7 +5,7 @@ A CMS for AO-Rebirth Local Servers
 Features:
 - Homepage
   > Server Status
-  Display Server Status, Players Online, Latency, Registered Accounts, Characters.
+  > Players Online, Latency, Registered Accounts, Characters.
   > Live  Discord Feed
   Display Last 3 Discord posts from specified channel as News.
 
