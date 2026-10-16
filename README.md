@@ -34,7 +34,7 @@ Features:
   > - Login and Register
   > - Menu: Account Name, Account Type (Player / GM), Account Status (Active/Banned)
   > - Character List: Shows Character Name, Location, Unstuck.
-  > - Account Information: Shows Username, First Name, Last Name, Email with options to edit them except for username.
+  > - Account Details: Shows Username, First Name, Last Name, Email with options to edit them except for username.
   > - Change Password: Allows you to change your password.
   
 
