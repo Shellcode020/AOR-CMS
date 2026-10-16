@@ -18,7 +18,7 @@ Features:
   > All (community) guides in one database, from your local website.
   
 - Download
-- > Shows the downloadable client. Modify the download.html to unblock the download button and add your link there.
+ > Shows the downloadable client. Modify the download.html to unblock the download button and add your link there.
   
 - Support
   > Support / FAQ page. Modify support.html to your liking.
