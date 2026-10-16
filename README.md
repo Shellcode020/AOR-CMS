@@ -1,6 +1,7 @@
 # AOR-CMS
 A CMS for AO-Rebirth Local Servers
 ## Read SETUP-INSTRUCTIONS to set up these files without errors!
+Important Note: For the server status to work, the webfiles must run from same machine as the server. The server status checks when the AccountBroken process has started to display the online/offline and uptime status.
 
 Features:
 - Homepage
