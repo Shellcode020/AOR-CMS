@@ -1,0 +1,1161 @@
+
+/* =========================================================
+   ANARCHY ONLINE — ACCOUNT PANEL
+   The account hero is styled by guides.css.
+   ========================================================= */
+
+.account-shell {
+    width: 100%;
+    max-width: 1228px;
+    margin: 0 auto;
+    padding: 42px 24px 72px;
+    box-sizing: border-box;
+    color: #e6edf5;
+}
+
+.account-shell .layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+    width: 100%;
+}
+
+.account-shell .content {
+    min-width: 0;
+}
+
+/* =========================================================
+   CONSISTENT SECTION LABELS
+   YOUR ROSTER / PROFILE / SECURITY
+   ========================================================= */
+
+.account-shell .account-section-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 0 12px;
+    padding: 6px 10px;
+    color: #83ddfa;
+    background: rgba(0, 145, 205, 0.09);
+    border: 1px solid rgba(84, 200, 237, 0.3);
+    border-radius: 3px;
+    font-family: "Exo 2", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* The roster heading uses the same label styling. */
+.account-shell .section-heading .account-section-label {
+    margin-bottom: 10px;
+}
+
+/* Keep the heading spacing consistent between all panels. */
+.account-shell .panel > .account-section-label + h2 {
+    margin-top: 0;
+}
+
+/* =========================================================
+   SIDEBAR — MATCHES GUIDES .expansion-sidebar
+   ========================================================= */
+
+.account-shell .side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding: 10px;
+    position: sticky;
+    top: 82px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    background: rgba(10, 17, 29, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(0, 174, 230, 0.45)
+        rgba(2, 7, 13, 0.4);
+}
+
+/* Account identity: integrated into the menu, not a second panel. */
+
+.account-shell .account-sidebar-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    margin: 0 0 5px;
+    padding: 10px 12px 14px;
+    box-sizing: border-box;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.account-shell .account-sidebar-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #70d9a5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+}
+
+.account-shell .account-sidebar-status .online-dot {
+    display: inline-block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #45d995;
+    box-shadow: 0 0 8px rgba(69, 217, 149, 0.35);
+}
+
+.account-shell .account-sidebar-username {
+    color: #edf7ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.account-shell .account-sidebar-caption {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* Same geometry and typography as Guides .expansion-link. */
+
+.account-shell .side-nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    box-sizing: border-box;
+
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    font-family: "Exo 2", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: all 0.16s ease;
+}
+
+/* Match Guides hover and selected states exactly. */
+
+.account-shell .side-nav a:hover,
+.account-shell .side-nav a.active,
+.account-shell .side-nav a[aria-current="location"] {
+    color: var(--text);
+    background: rgba(0, 174, 230, 0.1);
+    border-color: rgba(0, 174, 230, 0.24);
+}
+
+.account-shell .side-nav a.active,
+.account-shell .side-nav a[aria-current="location"] {
+    box-shadow: inset 2px 0 var(--cyan);
+}
+
+.account-shell .side-nav a:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+}
+
+/* Match Guides .expansion-arrow. */
+
+.account-shell .side-nav .side-nav-arrow {
+    flex-shrink: 0;
+    color: var(--cyan);
+    font-size: 1.2rem;
+    line-height: normal;
+    opacity: 1;
+    transition: transform 0.16s ease;
+}
+
+.account-shell .side-nav a:hover .side-nav-arrow {
+    transform: translateX(2px);
+}
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.account-shell .panel {
+    min-width: 0;
+    margin: 0 0 22px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #0d121a;
+    border: 1px solid #202b38;
+    border-radius: 5px;
+    scroll-margin-top: 24px;
+}
+
+.account-shell .panel:last-child {
+    margin-bottom: 0;
+}
+
+.account-shell .panel h2 {
+    margin: 0 0 8px;
+    color: #e6edf5;
+    font-size: 21px;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.account-shell .panel h3 {
+    margin: 0 0 12px;
+    color: #e6edf5;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.account-shell .panel > p {
+    margin: 0 0 20px;
+    color: #8d9bab;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.account-shell .eyebrow {
+    color: #54c8ed;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   SECTION HEADING AND CHARACTER COUNT
+   ========================================================= */
+
+.account-shell .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.account-shell .section-heading > div {
+    min-width: 0;
+}
+
+.account-shell .section-heading .eyebrow {
+    margin: 0 0 6px;
+}
+
+.account-shell .section-heading h2 {
+    margin: 0;
+}
+
+.account-shell .character-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    color: #a9bdce;
+    background: rgba(5, 15, 26, 0.85);
+    border: 1px solid rgba(0, 180, 255, 0.24);
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.account-shell .character-count strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    color: #83ddfa;
+    background: rgba(0, 180, 255, 0.12);
+    border: 1px solid rgba(0, 190, 255, 0.25);
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* =========================================================
+   CHARACTER TABLE
+   ========================================================= */
+
+.account-shell .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #202b38;
+    border-radius: 4px;
+}
+
+.account-shell table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #dce5ef;
+    font-size: 13px;
+    text-align: left;
+}
+
+.account-shell thead,
+.account-shell thead tr {
+    background: #1a2634;
+}
+
+.account-shell th {
+    padding: 14px 16px;
+    background: #1a2634;
+    color: #aebed0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-bottom: 1px solid #304154;
+}
+
+.account-shell td {
+    padding: 14px 16px;
+    background: #0d121a;
+    border-bottom: 1px solid #202b38;
+    vertical-align: middle;
+}
+
+.account-shell td strong {
+    color: #e6edf5;
+    font-weight: 600;
+}
+
+.account-shell td small {
+    display: block;
+    margin-top: 4px;
+    color: #8293a6;
+    font-size: 11px;
+}
+
+.account-shell tbody tr:nth-child(even) td {
+    background: #101721;
+}
+
+.account-shell tbody tr:hover td {
+    background: #151f2b;
+}
+
+.account-shell tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.account-shell .character-name {
+    color: #e6edf5;
+    font-weight: 600;
+}
+
+.account-shell .muted,
+.account-shell .text-muted {
+    color: #8d9bab;
+}
+
+/* =========================================================
+   ONLINE / OFFLINE STATUS
+   ========================================================= */
+
+.account-shell .state {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff8585;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.account-shell .state::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f05252;
+    box-shadow: 0 0 7px rgba(240, 82, 82, 0.3);
+}
+
+.account-shell .state.is-online {
+    color: #63e6a0;
+}
+
+.account-shell .state.is-online::before {
+    background: #35d782;
+    box-shadow: 0 0 7px rgba(53, 215, 130, 0.35);
+}
+
+/* =========================================================
+   UNSTUCK BUTTON
+   Replaces the old red button style.
+   Keeps the existing .unstuck-button selector.
+   ========================================================= */
+
+.account-shell .unstuck-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 98px;
+    min-height: 36px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    color: #83ddfa;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 145, 205, 0.17),
+        rgba(0, 80, 135, 0.1)
+    );
+    border: 1px solid rgba(0, 190, 255, 0.38);
+    border-radius: 4px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    transition:
+        color 160ms ease,
+        background 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.account-shell .unstuck-button:hover:not(:disabled) {
+    color: #fff;
+    background: rgba(0, 170, 230, 0.25);
+    border-color: #54c8ed;
+    box-shadow: 0 0 14px rgba(0, 170, 255, 0.12);
+}
+
+.account-shell .unstuck-button:focus-visible {
+    outline: 2px solid #83ddfa;
+    outline-offset: 3px;
+}
+
+.account-shell .unstuck-button:disabled {
+    color: #748191;
+    background: rgba(80, 90, 105, 0.08);
+    border-color: rgba(130, 145, 160, 0.16);
+    cursor: not-allowed;
+    opacity: 0.65;
+    box-shadow: none;
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+.account-shell .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.account-shell .form-grid > label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+    color: #b8c5d4;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.account-shell .form-grid > label.full,
+.account-shell .form-grid .full-width,
+.account-shell .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.account-shell .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.account-shell input,
+.account-shell select,
+.account-shell textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 13px;
+    box-sizing: border-box;
+    border: 1px solid #2a3949;
+    border-radius: 4px;
+    outline: none;
+    background: #080d13;
+    color: #e6edf5;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.45;
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.account-shell textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.account-shell input::placeholder,
+.account-shell textarea::placeholder {
+    color: #667688;
+}
+
+.account-shell input:focus,
+.account-shell select:focus,
+.account-shell textarea:focus {
+    border-color: #54c8ed;
+    box-shadow: 0 0 0 3px rgba(84, 200, 237, 0.12);
+}
+
+.account-shell input:disabled,
+.account-shell select:disabled,
+.account-shell textarea:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.account-shell .form-hint,
+.account-shell .field-hint {
+    color: #8392a3;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   GENERAL BUTTONS
+   ========================================================= */
+
+.account-shell button,
+.account-shell .button {
+    font-family: inherit;
+}
+
+.account-shell .btn,
+.account-shell button[type="submit"],
+.account-shell .action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 10px 16px;
+    border: 1px solid #2d647d;
+    border-radius: 4px;
+    background: #123244;
+    color: #a5e9ff;
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.3;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease;
+}
+
+.account-shell .btn:hover,
+.account-shell button[type="submit"]:hover,
+.account-shell .action-button:hover {
+    background: #19445b;
+    border-color: #54c8ed;
+    color: #fff;
+}
+
+.account-shell .btn:disabled,
+.account-shell button:disabled,
+.account-shell .action-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.account-shell .btn-secondary {
+    background: #141d28;
+    border-color: #2a3949;
+    color: #c1cedc;
+}
+
+.account-shell .btn-secondary:hover {
+    background: #1b2938;
+    border-color: #42586e;
+}
+
+/* Keep danger styling for actual destructive actions only. */
+.account-shell .btn-danger {
+    background: #30191c;
+    border-color: #653037;
+    color: #ffaaaa;
+}
+
+.account-shell .btn-danger:hover {
+    background: #492126;
+    border-color: #a84751;
+    color: #fff;
+}
+
+/* =========================================================
+   FORM ACTIONS AND MESSAGES
+   ========================================================= */
+
+.account-shell .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    grid-column: 1 / -1;
+}
+
+.account-shell .notice,
+.account-shell .message,
+.account-shell .form-message,
+.account-shell #character-message,
+.account-shell #profile-message,
+.account-shell #password-message {
+    font-size: 13px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.account-shell .message,
+.account-shell .form-message,
+.account-shell #character-message,
+.account-shell #profile-message,
+.account-shell #password-message {
+    margin-top: 12px;
+}
+
+.account-shell .message:empty,
+.account-shell .form-message:empty,
+.account-shell #character-message:empty,
+.account-shell #profile-message:empty,
+.account-shell #password-message:empty {
+    display: none;
+}
+
+.account-shell .success,
+.account-shell .message.success {
+    color: #63e6a0;
+}
+
+.account-shell .error,
+.account-shell .message.error {
+    color: #ff8585;
+}
+
+/* =========================================================
+   PASSWORD SECURITY WARNING
+   ========================================================= */
+
+.account-shell .password-security-warning {
+    margin: 20px 0;
+    padding: 16px 18px;
+    border: 1px solid #6c5228;
+    border-left: 3px solid #e4ad49;
+    border-radius: 4px;
+    background: #211b12;
+    color: #e7d5b1;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.account-shell .password-security-warning strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffd486;
+    font-size: 12px;
+}
+
+.account-shell .password-security-warning p {
+    margin: 0;
+}
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+.account-shell .empty,
+.account-shell .empty-state {
+    padding: 24px 18px;
+    border: 1px dashed #2a3949;
+    border-radius: 4px;
+    color: #8d9bab;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .account-shell {
+        padding: 32px 20px 56px;
+    }
+
+    .account-shell .layout {
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .account-shell .panel {
+        padding: 20px;
+    }
+
+    .account-shell th,
+    .account-shell td {
+        padding: 12px;
+    }
+}
+
+/* Match the Guides page breakpoint: the sidebar moves above content on tablets. */
+
+@media (max-width: 850px) {
+    .account-shell .layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .account-shell .side-nav {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .account-shell .account-sidebar-card {
+        margin-bottom: 4px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .account-shell {
+        padding: 24px 16px 44px;
+    }
+
+    .account-shell .layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .account-shell .side-nav {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+        padding: 10px;
+    }
+
+    .account-shell .account-sidebar-card {
+        grid-column: 1 / -1;
+        margin-bottom: 4px;
+    }
+
+    .account-shell .side-nav a {
+        justify-content: space-between;
+        padding: 11px 12px;
+        font-size: 0.85rem;
+        text-align: left;
+    }
+
+    .account-shell .side-nav-arrow {
+        display: inline;
+    }
+
+    .account-shell .panel {
+        padding: 18px 16px;
+        margin-bottom: 16px;
+    }
+
+    .account-shell .panel h2 {
+        font-size: 19px;
+    }
+
+    .account-shell .section-heading {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .account-shell .character-count {
+        gap: 6px;
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+    .account-shell .character-count strong {
+        min-width: 21px;
+        min-height: 21px;
+        font-size: 11px;
+    }
+
+    .account-shell .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .account-shell .form-grid > label.full,
+    .account-shell .form-grid .full-width,
+    .account-shell .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .account-shell .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .account-shell .form-actions button,
+    .account-shell .form-actions .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .account-shell .table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .account-shell table {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 420px) {
+    .account-shell .side-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .account-shell .side-nav a {
+        padding: 10px 8px;
+        font-size: 0.78rem;
+    }
+
+    .account-shell .section-heading {
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================
+   ACCOUNT SIDEBAR IDENTITY CARD
+========================================= */
+
+.account-sidebar-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+    padding: 20px 18px 16px;
+    border: 1px solid rgba(105, 153, 190, 0.28);
+    border-radius: 8px;
+    background:
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(35, 108, 157, 0.16),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 27, 42, 0.98),
+            rgba(7, 12, 21, 0.98)
+        );
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035),
+        0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Small sci-fi accent at the top */
+.account-sidebar-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 58px;
+    height: 2px;
+    background: #55c8f2;
+    box-shadow: 0 0 12px rgba(85, 200, 242, 0.45);
+}
+
+.account-card-top,
+.account-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.account-status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a4eac0;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.15px;
+}
+
+.account-status-indicator .online-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #51dc91;
+    box-shadow: 0 0 9px rgba(81, 220, 145, 0.55);
+}
+
+.account-card-icon {
+    color: #65c9f2;
+    font-size: 25px;
+    line-height: 1;
+    opacity: 0.85;
+}
+
+.account-card-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+    margin-top: 22px;
+}
+
+.account-card-label {
+    color: #7e94ac;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.account-sidebar-username {
+    display: block;
+    overflow-wrap: anywhere;
+    color: #f0f6ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.account-card-divider {
+    width: calc(100% + 28px);
+    height: 1px;
+    box-sizing: border-box;
+    margin: 18px -14px 14px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(101, 201, 242, 0.4),
+        rgba(101, 201, 242, 0.04)
+    );
+}
+.account-card-footer {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.account-role-icon {
+    color: #65c9f2;
+    font-size: 15px;
+}
+
+.account-sidebar-caption {
+    flex: 1 1 100px;
+    color: #a8b8ca;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.account-role-badge {
+    padding: 5px 7px;
+    border: 1px solid rgba(101, 201, 242, 0.28);
+    border-radius: 4px;
+    background: rgba(55, 145, 190, 0.10);
+    color: #83d8fa;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+/* Slightly tighter card on narrow screens */
+@media (max-width: 600px) {
+    .account-sidebar-card {
+        padding: 17px 15px 14px;
+        margin-bottom: 20px;
+    }
+
+    .account-sidebar-username {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   ACCOUNT INFORMATION CARD
+========================================= */
+
+.account-sidebar-card {
+    margin-bottom: 24px;
+    padding: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(95, 155, 195, 0.28);
+    border-radius: 8px;
+    background: linear-gradient(
+        145deg,
+        rgba(16, 27, 42, 0.98),
+        rgba(7, 12, 21, 0.98)
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Welcome frame */
+
+.account-welcome-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+
+    margin: -14px -14px 14px;
+    padding: 0 14px;
+    height: 40px;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 1px solid rgba(91, 191, 239, 0.3);
+    border-radius: 0;
+
+    background: linear-gradient(
+        110deg,
+        rgba(45, 126, 174, 0.20),
+        rgba(7, 12, 21, 0.15)
+    );
+
+    box-shadow: inset 3px 0 0 #48b9ed;
+}
+
+/* Account Menu: reuse the header structure with a subtler appearance */
+.account-menu-heading {
+    margin: 18px 0 12px;
+    padding: 10px 12px;
+    border: 1px solid rgba(95, 155, 195, 0.18);
+    border-radius: 5px;
+    background: rgba(16, 27, 42, 0.45);
+    box-shadow: none;
+}
+
+/* Remove the decorative accent used by the main Account Details banner */
+.account-menu-heading {
+    border-bottom: 1px solid rgba(95, 155, 195, 0.18);
+}
+
+.account-welcome-label {
+    color: #80a4bf;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.account-welcome-name {
+    color: #f0f7ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Account details */
+.account-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 2px;
+    border-bottom: 1px solid rgba(133, 160, 185, 0.12);
+}
+
+.account-info-row:last-child {
+    border-bottom: none;
+    padding-bottom: 3px;
+}
+
+.account-info-label {
+    color: #8d9fb2;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.account-info-value {
+    color: #e6eff8;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.account-type-badge {
+    padding: 4px 7px;
+    border: 1px solid rgba(91, 191, 239, 0.25);
+    border-radius: 4px;
+    background: rgba(45, 126, 174, 0.12);
+    color: #83d8fa;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+}
+
+.account-active-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #8ce5ac;
+}
+
+.account-active-status .online-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #51dc91;
+    box-shadow: 0 0 8px rgba(81, 220, 145, 0.45);
+}

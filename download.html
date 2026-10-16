@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05080f">
+
+  <title>Anarchy Online: Return to Rubi-Ka | Download Client</title>
+  <meta name="description" content="Download the Anarchy Online client and prepare to return to Rubi-Ka.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/account.css">
+
+  <!-- Download page styles -->
+
+  <link rel="stylesheet" href="css/download.css">
+  <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/guides.css">
+  <link rel="stylesheet" href="css/interior-pages.css">
+
+  <!-- Shared website functionality -->
+  <script src="js/site.js" defer></script>
+  <script src="js/shared-layout.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Shared navigation: loaded by shared-layout.js -->
+  <div id="site-navigation"></div>
+
+  <!-- Shared login and registration modal -->
+  <div id="site-account-modal"></div>
+
+  <!-- Download page hero -->
+    <section class="guides-hero">
+        <div class="guides-hero-inner">
+
+            <p class="hero-label">
+                YOUR JOURNEY STARTS HERE
+            </p>
+
+            <h1>Return to Rubi-Ka</h1>
+
+            <p>
+            Get your client ready
+      and prepare to step back into the world of Anarchy Online.
+            </p>
+
+        </div>
+    </section>
+
+
+
+  <main class="download-shell">
+
+    <!-- Client download -->
+    <section class="download-card">
+      <div class="download-card__number">01 / CLIENT</div>
+
+      <div class="download-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M32 7V39M20 27L32 39L44 27"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="square"
+                stroke-linejoin="miter"/>
+          <path d="M12 43V54H52V43"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="square"/>
+        </svg>
+      </div>
+
+      <p class="download-kicker">INSTALLATION</p>
+      <h2>Download Client</h2>
+
+      <p class="download-card__description">
+        Download the game client to prepare for your return to
+        Rubi-Ka. Installation instructions will be provided when
+        the client download is available.
+      </p>
+
+      <button class="download-button download-button--disabled"
+              type="button"
+              disabled>
+        <span>Client download coming soon</span>
+        <span aria-hidden="true">↗</span>
+      </button>
+
+      <p class="download-card__note">
+        The download link will be activated once the client is ready.
+      </p>
+    </section>
+
+    <!-- Account call to action -->
+    <section class="download-next">
+      <div class="download-next__content">
+        <p class="download-kicker">READY FOR THE NEXT STEP?</p>
+
+        <h2>Done downloading?<br><span>Create your account.</span></h2>
+
+        <p>
+          Your next adventure is waiting. Create your account and
+          get ready to join the community.
+        </p>
+
+        <div class="download-next__actions">
+          <button class="download-button"
+                  type="button"
+                  data-open-register>
+            Create your account
+            <span aria-hidden="true">↗</span>
+          </button>
+
+          <button class="download-button download-button--secondary"
+                  type="button"
+                  data-open-account>
+            Already have an account?
+          </button>
+        </div>
+      </div>
+
+      <div class="download-next__graphic" aria-hidden="true">
+        <div class="download-orbit download-orbit--outer"></div>
+        <div class="download-orbit download-orbit--inner"></div>
+        <div class="download-core">AO</div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- Shared footer: loaded by shared-layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Keep this after the shared layout script so it can
+       initialize the account modal when it becomes available. -->
+  <script src="js/register.js" defer></script>
+
+</body>
+</html>

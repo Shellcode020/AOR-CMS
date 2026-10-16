@@ -1,0 +1,31 @@
+
+  <!-- Account dialog. Registration fields and IDs are kept compatible with api/register.php. -->
+  <div class="account-modal" id="account-modal" hidden>
+    <section class="account-panel" role="dialog" aria-modal="true" aria-labelledby="account-title">
+      <button class="account-close" type="button" aria-label="Close account dialog" data-close-account>&times;</button>
+      <div id="login-view">
+        <h2 id="account-title">Welcome back</h2><p class="account-intro">Sign in to manage your journey on Rubi-Ka.</p>
+        <form id="login-form">
+          <div class="account-field"><label for="login-username">Username</label><input id="login-username" name="username" autocomplete="username" required></div>
+          <div class="account-field"><label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required></div>
+          <button class="account-submit" type="submit">Login</button><p class="account-status" id="login-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="account-switch">New to Rubi-Ka? <button type="button" data-show-register>Create an account</button></p>
+      </div>
+      <div id="register-view" hidden>
+        <div class="account-eyebrow">JOIN THE COMMUNITY</div><h2>Create Account</h2><p class="account-intro">Your journey back to Rubi-Ka begins here.</p>
+       <form id="register-form">
+          <div class="register-grid">
+            <div class="account-field full"><label for="register-username">Username</label><input id="register-username" name="username" minlength="6" maxlength="20" pattern="[A-Za-z0-9_]{6,20}" autocomplete="username" required></div>
+            <div class="account-field"><label for="register-first-name">First Name</label><input id="register-first-name" name="first_name" maxlength="80" autocomplete="given-name" required></div>
+            <div class="account-field"><label for="register-last-name">Last Name</label><input id="register-last-name" name="last_name" maxlength="80" autocomplete="family-name" required></div>
+            <div class="account-field full"><label for="register-email">Email Address</label><input id="register-email" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+            <div class="account-field"><label for="register-password">Password</label><input id="register-password" name="password" type="password" minlength="6" maxlength="128" autocomplete="new-password" required></div>
+            <div class="account-field"><label for="register-confirm">Confirm Password</label><input id="register-confirm" name="password_confirm" type="password" minlength="6" maxlength="128" autocomplete="new-password" required></div>
+          </div>
+          <button class="account-submit" id="register-submit" type="submit">Create Account</button><p class="account-status" id="register-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="account-switch">Already have an account? <button type="button" data-show-login>Sign in</button></p>
+      </div>
+    </section>
+  </div>

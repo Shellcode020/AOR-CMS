@@ -1,0 +1,31 @@
+/* Discord announcement cards — typography-led, no Discord/logo thumbnail column. */
+#home .discord-news-section{min-width:0}
+#home .discord-news-section .home-news-layout{align-items:start}
+#home .discord-news-section .home-news-intro{align-self:start;height:auto;min-height:0}
+#home .discord-news-section .news-list{display:flex;flex-direction:column;gap:9px;padding-top:12px}
+#home .discord-news-section .news-item{display:block;min-width:0;padding:16px 18px;background:linear-gradient(110deg,rgba(84,200,237,.035),transparent 48%),#0d141d;border:1px solid #202d3a;border-left:2px solid #31566a;border-radius:3px;transition:background .18s,border-color .18s}
+#home .discord-news-section .news-item:hover{background:linear-gradient(110deg,rgba(84,200,237,.07),transparent 55%),#111b26;border-color:#385064;border-left-color:#54c8ed}
+#home .discord-news-section .news-thumb{display:none!important}
+#home .discord-news-section .news-body{min-width:0}
+#home .discord-news-section .news-body h3{margin:0 0 6px;color:#e6edf5;font-size:14px;font-weight:750;line-height:1.45;overflow-wrap:anywhere}
+#home .discord-news-section .news-date{display:flex;align-items:center;gap:7px;margin:0 0 10px;color:#68b8d5;font-size:9px;line-height:1.5;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+#home .discord-news-section .news-date:before{display:inline-block;width:5px;height:5px;flex:0 0 5px;border-radius:50%;background:#54c8ed;content:""}
+#home .discord-news-section .news-content{color:#a2afbd;font-size:12px;line-height:1.7;overflow-wrap:anywhere;white-space:pre-line}
+#home .discord-news-section .news-content p{display:block;margin:0 0 .7em;color:inherit;font-size:inherit;line-height:inherit;overflow:visible}
+#home .discord-news-section .news-content p:last-child{margin-bottom:0}
+#home .discord-news-section .news-content h3,#home .discord-news-section .news-content h4,#home .discord-news-section .news-content h5{margin:.8em 0 .4em;color:#e6edf5;font-size:12px;font-weight:750}
+#home .discord-news-section .news-content a{color:#65d4f5;text-decoration:underline;text-decoration-color:rgba(101,212,245,.45);text-underline-offset:2px}
+#home .discord-news-section .news-content a:hover{color:#fff}
+#home .discord-news-section .news-content ul,#home .discord-news-section .news-content ol{margin:.4em 0 .8em;padding-left:20px}
+#home .discord-news-section .news-content li{margin:.2em 0;padding-left:2px}
+#home .discord-news-section .news-content blockquote{margin:.6em 0;padding:.3em 0 .3em 12px;border-left:2px solid #54c8ed;color:#93a5b6}
+#home .discord-news-section .news-content code{padding:2px 5px;border-radius:3px;background:#070b10;color:#83ddfa;font-family:Consolas,monospace;font-size:.92em}
+#home .discord-news-section .news-content pre{margin:.6em 0;padding:11px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#070b10;border:1px solid #202b38;border-radius:3px}
+#home .discord-news-section .news-content pre code{padding:0;background:transparent}
+#home .discord-news-section .news-read-link{display:inline-flex;align-items:center;gap:5px;margin-top:12px;color:#54c8ed;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+#home .discord-news-section .news-read-link:hover{color:#83ddfa}
+#home .discord-news-section .discord-news-state{padding:18px 15px;color:#91a0b0;font-size:12px;line-height:1.65;background:#0d141d;border:1px solid #202d3a;border-radius:4px}
+#home .discord-news-section .discord-news-state.error{color:#f0b3b3;border-color:rgba(235,100,100,.3)}
+#home .discord-news-section .discord-news-footnote{display:flex;align-items:center;gap:8px;margin:12px 0 0;color:#748597;font-size:10px}
+#home .discord-news-section .discord-news-live-dot{display:inline-block;width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:#54c8ed;box-shadow:0 0 8px rgba(84,200,237,.3)}
+@media(max-width:480px){#home .discord-news-section .news-item{padding:13px 14px}#home .discord-news-section .news-body h3{font-size:13px}}

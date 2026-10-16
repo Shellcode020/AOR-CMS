@@ -1,0 +1,11 @@
+name = "ao-rebirth-discord-news"
+main = "worker.js"
+compatibility_date = "2026-10-12"
+
+[vars]
+# Use "*" for a public news API, or set your exact website origin, e.g. "https://aorebirth.example"
+ALLOWED_ORIGIN = "*"
+
+# Set these in Cloudflare Worker Settings -> Variables and Secrets:
+# DISCORD_CHANNEL_ID (text variable)
+# DISCORD_BOT_TOKEN (secret — never put it in this file or website JavaScript)

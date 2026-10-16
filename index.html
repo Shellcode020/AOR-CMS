@@ -1,0 +1,366 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+
+  <title>Anarchy Online: Return to Rubi-Ka</title>
+
+  <meta
+    name="description"
+    content="Return to Rubi-Ka. Explore the Anarchy Online community, latest announcements, server information, and player guides."
+  >
+
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/discord-news.css">
+  <link rel="stylesheet" href="css/discord-news-paragraph-fix.css">
+  <link rel="stylesheet" href="css/interior-pages.css">
+</head>
+
+<body>
+  <div id="site-navigation"></div>
+  <div id="site-account-modal"></div>
+
+  <main id="home">
+
+    <!-- Hero -->
+    <section class="home-hero">
+      <div class="home-hero__image" aria-hidden="true"></div>
+
+      <div class="home-hero__content">
+        <div class="home-eyebrow">
+          <span class="home-eyebrow__dot"></span>
+          AN ANARCHY ONLINE COMMUNITY PROJECT
+        </div>
+
+        <h1>
+          RETURN TO<br>
+          <span>RUBI-KA</span>
+        </h1>
+
+        <p class="home-hero__description">
+          A familiar universe. A new beginning. Rediscover the world, the professions, and the community that made Anarchy Online unforgettable.
+        </p>
+
+        <div class="home-hero__actions">
+          <a class="home-button home-button--primary" href="download.html">
+            Get started <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="home-button home-button--secondary" href="guides.html">
+            Explore the guides
+          </a>
+        </div>
+
+        <div class="home-hero__footer">
+          <span>CLASSIC GAMEPLAY</span>
+          <span class="home-separator">/</span>
+          <span>COMMUNITY DRIVEN</span>
+          <span class="home-separator">/</span>
+          <span>BUILT FOR THE LONG RUN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Server overview -->
+    <section class="home-section home-status-section">
+      <div class="home-section-heading">
+        <div>
+          <div class="home-kicker">LIVE ENVIRONMENT</div>
+          <h2>Server Information</h2>
+        </div>
+      </div>
+
+      <div class="home-status-grid">
+
+        <article class="home-panel home-status-main">
+          <div class="home-panel-topline">
+            <span class="home-panel-label">SERVER STATUS</span>
+            <span class="home-panel-symbol">01</span>
+          </div>
+
+          <div class="home-status-main__body">
+            <span
+              class="home-status-indicator home-status-indicator--large"
+              id="server-status-indicator"
+              role="img"
+              aria-label="Checking server status"
+            ></span>
+
+            <div>
+              <h3>Anarchy Online</h3>
+              <p>Rubi-Ka Environment</p>
+            </div>
+          </div>
+
+          <div class="home-status-divider"></div>
+
+          <div class="home-status-bottom">
+            <span>Uptime</span>
+            <strong id="server-uptime">—</strong>
+          </div>
+        </article>
+
+        <article class="home-panel home-stat-card">
+          <div class="home-panel-topline">
+            <span class="home-panel-label">POPULATION</span>
+            <span class="home-panel-symbol">02</span>
+          </div>
+
+          <div class="home-stat-value" id="server-players-online">—</div>
+          <div class="home-stat-caption">Players Online</div>
+
+          <div class="home-stat-line">
+            <span></span>
+          </div>
+        </article>
+
+        <article class="home-panel home-stat-card">
+          <div class="home-panel-topline">
+            <span class="home-panel-label">NETWORK</span>
+            <span class="home-panel-symbol">03</span>
+          </div>
+
+          <div class="home-stat-value" id="server-latency">—</div>
+          <div class="home-stat-caption">Server Latency</div>
+
+          <div class="home-stat-line">
+            <span></span>
+          </div>
+        </article>
+
+        <article class="home-panel home-stat-card">
+          <div class="home-panel-topline">
+            <span class="home-panel-label">COMMUNITY</span>
+            <span class="home-panel-symbol">04</span>
+          </div>
+
+          <div class="home-stat-value" id="server-accounts">—</div>
+          <div class="home-stat-caption">Registered Accounts</div>
+
+          <div class="home-stat-line">
+            <span></span>
+          </div>
+        </article>
+
+        <article class="home-panel home-stat-card">
+          <div class="home-panel-topline">
+            <span class="home-panel-label">CHARACTERS</span>
+            <span class="home-panel-symbol">05</span>
+          </div>
+
+          <div class="home-stat-value" id="server-characters">—</div>
+          <div class="home-stat-caption">Characters Created</div>
+
+          <div class="home-stat-line">
+            <span></span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="home-small-note">
+        Statistics appear when the server status service is available.
+      </p>
+    </section>
+
+    <!-- Latest announcements -->
+    <section
+      class="home-section home-news-section discord-news-section"
+      id="discord"
+    >
+      <div class="home-section-heading">
+        <div>
+          <div class="home-kicker">FROM THE COMMUNITY</div>
+          <h2>Latest Announcements</h2>
+        </div>
+
+        <a
+          class="home-text-link"
+          id="discordNewsViewAll"
+          href="https://discord.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on Discord <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="home-news-layout">
+
+        <article class="home-panel home-news-intro">
+          <div class="home-news-intro__art" aria-hidden="true">
+            <span class="home-news-orbit home-news-orbit--one"></span>
+            <span class="home-news-orbit home-news-orbit--two"></span>
+            <span class="home-news-core"></span>
+            <span class="home-news-art-label">ANARCHY<br>ONLINE</span>
+          </div>
+
+          <div class="home-kicker">COMMUNITY TRANSMISSION</div>
+          <h3>Stay in the Loop</h3>
+
+          <p>
+            Development notes, community updates, and important announcements from the team are displayed here.<br><Br>The announcement feed is a live feed displayed from our announcements channel on discord.<br><br>
+			You may also join our discord server to see them directly.
+          </p>
+
+          <a class="home-text-link" href="https://discord.gg/">
+            Join Discord <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <div class="home-news-feed">
+          <div class="home-feed-heading">
+            <span>ANNOUNCEMENT FEED</span>
+
+            <span class="home-feed-live">
+              <span></span>
+              LIVE UPDATES
+            </span>
+          </div>
+
+          <div
+            class="news-list"
+            id="discordNewsList"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <div class="discord-news-state">
+              Connecting to announcements…
+            </div>
+          </div>
+
+          <p class="discord-news-footnote">
+            <span class="discord-news-live-dot"></span>
+            Latest posts from the official Discord.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project principles -->
+    <section class="home-section home-principles-section">
+      <div class="home-section-heading">
+        <div>
+          <div class="home-kicker">THE PROJECT APPROACH</div>
+          <h2>The Right Foundations</h2>
+        </div>
+
+        <p class="home-section-intro">
+          
+        </p>
+      </div>
+
+      <div class="home-principles-grid">
+
+        <article class="home-panel home-principle">
+          <div class="home-principle-number">01</div>
+          <div class="home-principle-icon" aria-hidden="true">◈</div>
+          <h3>Classic First</h3>
+          <p>
+            Keep the familiar Anarchy Online experience and original spirit at the centre of the project.
+          </p>
+          <span class="home-principle-line"></span>
+        </article>
+
+        <article class="home-panel home-principle">
+          <div class="home-principle-number">02</div>
+          <div class="home-principle-icon" aria-hidden="true">⌘</div>
+          <h3>Meaningful Balance</h3>
+          <p>
+            Work toward a healthier game where every profession has a meaningful role and opportunity.
+          </p>
+          <span class="home-principle-line"></span>
+        </article>
+
+        <article class="home-panel home-principle">
+          <div class="home-principle-number">03</div>
+          <div class="home-principle-icon" aria-hidden="true">⟡</div>
+          <h3>Built Together</h3>
+          <p>
+            Use community feedback and thoughtful development to guide sustainable improvements.
+          </p>
+          <span class="home-principle-line"></span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Getting started -->
+    <section class="home-section home-start-section">
+      <div class="home-start-panel">
+        <div class="home-start-content">
+          <div class="home-kicker">YOUR NEXT ADVENTURE STARTS HERE</div>
+
+          <h2>
+            Ready to Return<br>
+            to <span>Rubi-Ka?</span>
+          </h2>
+
+          <p>
+            Get familiar with the project, explore the available resources, and find your way back into the world.
+          </p>
+
+          <div class="home-start-actions">
+            <a class="home-button home-button--primary" href="download.html">
+              Get started <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="home-button home-button--secondary" href="guides.html">
+              Read the guides
+            </a>
+          </div>
+        </div>
+
+        <div class="home-start-mark" aria-hidden="true">
+          <span class="home-start-mark__outer"></span>
+          <span class="home-start-mark__inner"></span>
+          <span class="home-start-mark__text">AO</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Player account -->
+    <section class="home-account-strip">
+      <div>
+        <div class="home-kicker">PLAYER ACCOUNT</div>
+        <h2>Make your next move.</h2>
+        <p>Access your account or create one to begin your journey.</p>
+      </div>
+
+      <div class="home-account-actions">
+        <button
+          class="home-button home-button--primary"
+          type="button"
+          data-open-register
+        >
+          Create account <span aria-hidden="true">↗</span>
+        </button>
+
+        <button
+          class="home-button home-button--secondary"
+          type="button"
+          data-open-account
+        >
+          Account login
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="account-modal-container"></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/register.js"></script>
+  <script src="js/discord-news.js"></script>
+  <script src="js/server-status.js"></script>
+  <script src="js/shared-layout.js"></script>
+</body>
+</html>

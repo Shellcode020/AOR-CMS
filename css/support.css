@@ -1,0 +1,415 @@
+
+/* =========================================================
+   SUPPORT & FAQ
+   Anarchy Online: Return to Rubi-Ka
+   ========================================================= */
+
+.support-hero {
+  min-height: 260px;
+}
+
+.support-hero__inner {
+  max-width: 850px;
+}
+
+.support-hero__inner > p:not(.hero-label) {
+  max-width: 680px;
+}
+
+.support-hero__button {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 24px;
+  text-decoration: none;
+}
+
+.support-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 88px;
+  color: var(--text);
+}
+
+/* Introduction */
+
+.support-intro {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.support-kicker {
+  margin: 0 0 10px;
+  color: var(--cyan);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.support-intro h2,
+.support-discord h2 {
+  margin: 0 0 16px;
+  font-family: Orbitron, sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.support-intro > p:last-child,
+.support-discord__content > p:not(.support-kicker) {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* FAQ sections */
+
+.support-section {
+  margin-top: 42px;
+}
+
+.support-section__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 190, 255, .2);
+}
+
+.support-section__number {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(0, 190, 255, .35);
+  background: rgba(0, 190, 255, .06);
+  color: var(--cyan);
+  font-family: Orbitron, sans-serif;
+  font-size: .8rem;
+}
+
+.support-section__heading h2 {
+  margin: 0;
+  font-family: Orbitron, sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.support-faq {
+  display: grid;
+  gap: 10px;
+}
+
+.support-faq__item {
+  overflow: hidden;
+  border: 1px solid rgba(130, 160, 190, .16);
+  background: rgba(12, 19, 31, .72);
+  transition:
+    border-color .2s ease,
+    background .2s ease;
+}
+
+.support-faq__item:hover,
+.support-faq__item[open] {
+  border-color: rgba(0, 190, 255, .35);
+  background: rgba(12, 22, 36, .94);
+}
+
+.support-faq__item summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 21px 24px;
+  color: var(--text);
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.5;
+  list-style: none;
+  cursor: pointer;
+}
+
+.support-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.support-faq__item summary::after {
+  content: "+";
+  display: grid;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid rgba(0, 190, 255, .3);
+  color: var(--cyan);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.support-faq__item[open] summary::after {
+  content: "−";
+  background: rgba(0, 190, 255, .1);
+}
+
+.support-faq__item summary:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: -4px;
+}
+
+.support-faq__answer {
+  padding: 0 24px 24px;
+  color: var(--text-muted);
+  font-size: .97rem;
+  line-height: 1.8;
+}
+
+.support-faq__answer p {
+  margin: 0 0 16px;
+}
+
+.support-faq__answer p:last-child {
+  margin-bottom: 0;
+}
+
+.support-faq__answer strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.support-faq__answer ul {
+  display: grid;
+  gap: 9px;
+  margin: 12px 0 20px;
+  padding-left: 22px;
+}
+
+.support-faq__answer li {
+  padding-left: 3px;
+}
+
+.support-faq__answer li::marker {
+  color: var(--cyan);
+}
+
+.support-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  color: var(--cyan);
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.support-inline-link:hover {
+  color: #fff;
+}
+
+.support-inline-link span {
+  transition: transform .2s ease;
+}
+
+.support-inline-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* Final Discord call to action */
+
+.support-discord {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  overflow: hidden;
+  min-height: 260px;
+  margin-top: 64px;
+  padding: 40px 44px;
+  border: 1px solid rgba(0, 190, 255, .24);
+  background:
+    radial-gradient(
+      circle at 90% 50%,
+      rgba(0, 190, 255, .11),
+      transparent 38%
+    ),
+    linear-gradient(120deg, rgba(14, 24, 39, .98), rgba(5, 10, 19, .98));
+}
+
+.support-discord__content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+}
+
+.support-discord h2 {
+  max-width: 580px;
+  font-size: clamp(1.35rem, 2.7vw, 2rem);
+}
+
+.support-discord__content > p:not(.support-kicker) {
+  margin-bottom: 22px;
+}
+
+.support-discord__content .download-button {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+/* Decorative graphic */
+
+.support-discord__graphic {
+  position: relative;
+  display: grid;
+  flex: 0 0 190px;
+  width: 190px;
+  height: 190px;
+  place-items: center;
+}
+
+.support-discord__ring {
+  position: absolute;
+  border: 1px solid rgba(0, 190, 255, .3);
+  border-radius: 50%;
+}
+
+.support-discord__ring--outer {
+  inset: 0;
+  border-right-color: var(--cyan);
+  transform: rotate(-25deg);
+}
+
+.support-discord__ring--inner {
+  inset: 22px;
+  border-style: dashed;
+  border-color: rgba(0, 190, 255, .4);
+  animation: support-orbit 24s linear infinite;
+}
+
+.support-discord__core {
+  display: grid;
+  width: 90px;
+  height: 90px;
+  place-items: center;
+  border: 1px solid rgba(0, 190, 255, .45);
+  background: rgba(0, 190, 255, .08);
+  color: var(--cyan);
+  font-family: Orbitron, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-shadow: 0 0 24px rgba(0, 190, 255, .45);
+}
+
+@keyframes support-orbit {
+  to {
+    transform: rotate(335deg);
+  }
+}
+
+/* Responsive layout */
+
+@media (max-width: 760px) {
+  .support-shell {
+    width: min(100% - 32px, 1120px);
+    padding: 36px 0 60px;
+  }
+
+  .support-hero {
+    min-height: 230px;
+  }
+
+  .support-intro {
+    margin-bottom: 36px;
+  }
+
+  .support-section {
+    margin-top: 34px;
+  }
+
+  .support-faq__item summary {
+    gap: 16px;
+    padding: 18px;
+    font-size: .97rem;
+  }
+
+  .support-faq__answer {
+    padding: 0 18px 20px;
+    font-size: .94rem;
+  }
+
+  .support-discord {
+    min-height: auto;
+    margin-top: 44px;
+    padding: 30px 24px;
+  }
+
+  .support-discord__graphic {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-hero__button {
+    margin-top: 20px;
+  }
+
+  .support-section__heading {
+    gap: 12px;
+  }
+
+  .support-section__number {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: .7rem;
+  }
+
+  .support-section__heading h2 {
+    font-size: 1rem;
+  }
+
+  .support-faq__item summary {
+    padding: 16px;
+    font-size: .92rem;
+  }
+
+  .support-faq__answer {
+    padding: 0 16px 18px;
+  }
+
+  .support-discord {
+    padding: 26px 20px;
+  }
+
+  .support-discord .download-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .support-discord__ring--inner {
+    animation: none;
+  }
+
+  .support-faq__item,
+  .support-inline-link,
+  .support-inline-link span {
+    transition: none;
+  }
+}

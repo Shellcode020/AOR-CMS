@@ -1,0 +1,258 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#05080f">
+
+    <title>Anarchy Online: Return to Rubi-Ka | Guide Database</title>
+
+    <!-- Main site styles -->
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/account.css">
+
+    <!-- Guides page styles -->
+    <link rel="stylesheet" href="css/guides.css">
+	<link rel="stylesheet" href="css/guide-reader.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/interior-pages.css">
+
+    <!-- Site scripts -->
+    <script src="js/site.js" defer></script>
+    <script src="js/guides.js" defer></script>
+    <script src="js/shared-layout.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Shared site navigation -->
+    <div id="site-navigation"></div>
+
+    <!-- Account modal -->
+    <div id="site-account-modal"></div>
+
+
+    <!-- ========================================
+         GUIDES HERO
+    ========================================= -->
+    <section class="guides-hero">
+        <div class="guides-hero-inner">
+
+            <p class="hero-label">
+                ANARCHY ONLINE DATABASE
+            </p>
+
+            <h1>Guides</h1>
+
+            <p>
+                Explore the world of Rubi-Ka.
+                Browse community guides by expansion and category.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         MAIN GUIDES CONTENT
+    ========================================= -->
+    <main class="guides-shell">
+
+        <!-- Page heading and guide count -->
+        <div class="guides-page-heading">
+
+            <div>
+                <p class="eyebrow">
+                    RUBI-KA REFERENCE
+                </p>
+
+                <h2>Browse the Library</h2>
+            </div>
+
+            <span class="database-note">
+                <span class="note-dot"></span>
+
+                <span id="guideCount">
+                    Loading guide index…
+                </span>
+            </span>
+
+        </div>
+
+
+        <!-- ========================================
+             GUIDES LAYOUT
+             Expansion sidebar + guide content
+        ========================================= -->
+        <div class="guides-layout">
+
+
+            <!-- EXPANSION SIDEBAR -->
+            <aside class="expansion-sidebar">
+
+                <div class="sidebar-title">
+                    EXPANSIONS
+                </div>
+
+                <div id="expansionLinks" class="expansion-links">
+
+                    <a
+                        class="expansion-link active"
+                        href="#classic-ao"
+                        data-expansion="1"
+                    >
+                        <span>Classic AO</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                    <a
+                        class="expansion-link"
+                        href="#notum-wars"
+                        data-expansion="2"
+                    >
+                        <span>Notum Wars</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                    <a
+                        class="expansion-link"
+                        href="#shadowlands"
+                        data-expansion="3"
+                    >
+                        <span>Shadowlands</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                    <a
+                        class="expansion-link"
+                        href="#alien-invasion"
+                        data-expansion="4"
+                    >
+                        <span>Alien Invasion</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                    <a
+                        class="expansion-link"
+                        href="#lost-eden"
+                        data-expansion="5"
+                    >
+                        <span>Lost Eden</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                    <a
+                        class="expansion-link"
+                        href="#legacy-of-the-xan"
+                        data-expansion="6"
+                    >
+                        <span>Legacy of the Xan</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                    <a
+                        class="expansion-link"
+                        href="#nostalgia"
+                        data-expansion="7"
+                    >
+                        <span>Nostalgia</span>
+                        <span class="expansion-arrow">›</span>
+                    </a>
+
+                </div>
+
+                <div class="sidebar-foot">
+                    Choose an expansion to browse its guide categories.
+                </div>
+
+            </aside>
+
+
+            <!-- GUIDES CONTENT PANEL -->
+            <section class="guides-content">
+
+                <div class="guides-panel">
+
+                    <!-- Selected expansion heading -->
+                    <div class="guides-panel-heading">
+
+                        <div>
+                            <p class="eyebrow">
+                                SELECTED EXPANSION
+                            </p>
+
+                            <h2 id="selectedExpansion">
+                                Classic AO
+                            </h2>
+
+                            <p
+                                id="expansionDescription"
+                                class="guides-subtitle"
+                            >
+                                Browse available guides and categories
+                                for this expansion.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Guide search -->
+                    <div class="guide-search-wrap">
+
+                        <label for="guideSearch">
+                            SEARCH GUIDES
+                        </label>
+
+                        <input
+                            id="guideSearch"
+                            type="search"
+                            placeholder="Search guide titles or categories…"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- Dynamic guide categories -->
+                    <div id="categoryList" class="category-list">
+
+                        <div class="guides-empty">
+
+                            <div class="empty-symbol">
+                                ✧
+                            </div>
+
+                            <h3>
+                                Guide index not imported yet
+                            </h3>
+
+                            <p>
+                                Run the included importer to download
+                                the guide categories, article text
+                                and images into this website.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Shared site footer -->
+    <div id="site-footer"></div>
+
+
+    <!-- Registration script -->
+    <script src="js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Anarchy Online: Return to Rubi-Ka | Item Database</title>
+
+    <meta
+        name="description"
+        content="Search the Anarchy Online item database by name, AOID, and Quality Level. Explore item statistics, requirements, and technical data."
+    >
+    <meta name="theme-color" content="#080d16">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/home.css">
+	    <link rel="stylesheet" href="css/guides.css">
+    <link rel="stylesheet" href="css/items.css">
+    <link rel="stylesheet" href="css/interior-pages.css">
+
+
+    <script src="js/site.js" defer></script>
+    <script src="js/shared-layout.js" defer></script>
+    <script src="js/items.js" defer></script>
+</head>
+
+<body>
+    <!-- Shared site navigation -->
+    <div id="site-navigation"></div>
+
+    <!-- Shared account modal -->
+    <div id="site-account-modal"></div>
+
+    <main>
+        <!-- Page hero -->
+    <section class="guides-hero">
+        <div class="guides-hero-inner">
+
+            <p class="hero-label">
+                ANARCHY ONLINE DATABASE
+            </p>
+
+            <h1>Item Database</h1>
+
+            <p>
+                Discover weapons, armor, equipment, and other items. 
+            </p>
+
+        </div>
+    </section>
+
+        <!-- Main database interface -->
+        <div class="items-shell">
+
+            <header class="items-page-heading">
+
+                <div class="items-database-note">
+                    <span class="items-note-dot" aria-hidden="true"></span>
+
+                    <span>
+                        <strong>Database information:</strong>
+                        Each AOID is treated as an individual record.
+                        Items with the same name may have different QLs,
+                        requirements, or statistics.
+                    </span>
+                </div>
+            </header>
+
+            <div class="items-layout">
+
+                <!-- Search sidebar -->
+                <aside class="items-sidebar">
+                    <h2>Find an Item</h2>
+
+                    <form id="items-search-form" class="items-form">
+                        <div class="items-field">
+                            <label for="items-query">
+                                Item Name or AOID
+                            </label>
+
+                            <input
+                                id="items-query"
+                                name="q"
+                                type="search"
+                                maxlength="120"
+                                placeholder="e.g. JAME Blaster"
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <div class="items-field">
+                            <label for="items-ql">
+                                Quality Level (QL)
+                            </label>
+
+                            <input
+                                id="items-ql"
+                                name="ql"
+                                type="number"
+                                min="0"
+                                max="999"
+                                step="1"
+                                inputmode="numeric"
+                                placeholder="Any QL"
+                            >
+                        </div>
+
+                        <div class="items-search-actions">
+                            <button
+                                class="items-button"
+                                type="submit"
+                            >
+                                Search Items
+                            </button>
+
+                            <button
+                                class="items-button items-button-secondary"
+                                id="items-clear"
+                                type="button"
+                            >
+                                Clear
+                            </button>
+                        </div>
+
+                        <p class="items-search-hint">
+                            Tip: You can search using a partial item name
+                            or enter an exact AOID.
+                        </p>
+                    </form>
+                </aside>
+
+                <!-- Search results -->
+                <section class="items-panel" aria-labelledby="items-results-heading">
+                    <div class="items-panel-header">
+                        <h2 id="items-results-heading">Search Results</h2>
+
+                        <div
+                            class="items-results-meta"
+                            id="items-results-count"
+                            aria-live="polite"
+                        >
+                            Enter search criteria
+                        </div>
+                    </div>
+
+                    <div class="items-panel-body">
+                        <div
+                            id="items-status"
+                            class="items-state items-hidden"
+                            role="status"
+                            aria-live="polite"
+                        ></div>
+
+                        <div
+                            id="items-results"
+                            class="items-results-list"
+                            aria-live="polite"
+                        >
+                            <div class="items-state">
+                                <strong>Welcome to the Item Database</strong>
+
+                                Enter an item name, AOID, or QL to begin
+                                exploring the database.
+                            </div>
+                        </div>
+
+                        <nav
+                            id="items-pagination"
+                            class="items-pagination"
+                            aria-label="Item search pages"
+                        ></nav>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Selected item details are rendered here -->
+            <section
+                id="items-detail"
+                class="items-detail items-hidden"
+                aria-label="Selected item details"
+            ></section>
+
+        </div>
+    </main>
+
+    <!-- Shared site footer -->
+    <div id="site-footer"></div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>
