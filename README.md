@@ -4,10 +4,8 @@ A CMS for AO-Rebirth Local Servers
 
 Features:
 - Homepage
-  > Server Status,  Players Online, Latency, Registered Accounts, Characters.
-  > Live  Discord Feed
-  Display Last 3 Discord posts from specified channel as News.
-
+  > Server Status,  Players Online, Latency, Registered Accounts, Characters, Discord Integrated-News
+  
 - Nano Programs (Database)
   >  Shows all nanos for each profession.
   Hovering over said nano will display more details.
